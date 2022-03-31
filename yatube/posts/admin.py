@@ -1,6 +1,4 @@
-from re import search
 from django.contrib import admin
-
 from .models import Group
 from .models import Post
 
@@ -19,6 +17,7 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ('text',)
     list_filter = ('pub_date',)
     empty_value_display = '-пусто-'
+
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Group)
